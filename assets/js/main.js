@@ -21,7 +21,6 @@ const checkLabel = () => {
         labelMwstsatz.innerHTML = 'Bruttobetrag (Preis inklusive Mehrwertsteuer) in Euro'
         labelEndpreis.innerHTML = 'Nettobetrag'
     }
-
 }
 
 const steuer = () => {
