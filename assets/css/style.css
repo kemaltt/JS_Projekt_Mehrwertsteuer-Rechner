@@ -5,11 +5,16 @@
 }
 
 body {
-    padding: 5vh 35%;
+    padding: 5vh 33%;
 }
 
 h3 {
     padding: 2vh 0;
+}
+
+#label-mwstsatz::after {
+    content: '*';
+    color: red;
 }
 
 h2 {
