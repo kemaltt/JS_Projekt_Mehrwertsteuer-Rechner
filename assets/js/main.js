@@ -12,7 +12,6 @@ let preis;
 let mvst;
 
 
-
 const checkLabel = () => {
     if (zuBrutto.checked) {
         labelMwstsatz.innerHTML = 'Nettobetrag (Preis ohne Mehrsteuer) in Euro'
@@ -22,6 +21,20 @@ const checkLabel = () => {
         labelEndpreis.innerHTML = 'Nettobetrag'
     }
 }
+
+// const check = () => {
+//     let betrag = inputBetrag.value
+//     if (steuerSatz19.checked == true && zuBrutto.checked == true) {
+//         satz = 0.19;
+//         preis = betrag * (1 + satz)
+//         mvst = betrag * satz
+//     } else {
+//         satz = 0.07;
+//         preis = betrag / (1 + satz)
+//         mvst = preis * satz
+//     }
+
+// }
 
 const steuer = () => {
     if (steuerSatz19.checked) {
@@ -44,8 +57,12 @@ const bruttoTonetto = () => {
 }
 
 const berechnen = () => {
+
     steuer();
     bruttoTonetto();
-    outputMwstbetrag.innerHTML = mvst.toFixed(2) + ' €'
-    outputEndpreis.innerHTML = preis.toFixed(2) + ' €'
+    // check();
+    outputMwstbetrag.innerHTML = String(mvst.toFixed(2)).replace('.', ',') + ' €'
+    outputEndpreis.innerHTML = String(preis.toFixed(2)).replace('.', ',') + ' €'
+    inputBetrag.value = Number(inputBetrag.value).toFixed(2)
+
 }

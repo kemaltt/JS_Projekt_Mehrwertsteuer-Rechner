@@ -46,16 +46,21 @@ section div:nth-of-type(4) {
     margin: 2vh 0;
     padding: 2vh 0;
     text-align: center;
+    border-radius: 10px;
 }
 
 section div:nth-of-type(4) button {
     width: 80%;
-    padding: 10px;
+    padding: 15px;
     border: none;
     background-color: rgb(11, 38, 108);
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+}
+
+section div:nth-of-type(4) button:active {
+    background-color: blue;
 }
 
 section div:nth-of-type(1) div {
