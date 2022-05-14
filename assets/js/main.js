@@ -57,16 +57,25 @@ const bruttoTonetto = () => {
 }
 
 const berechnen = () => {
-    if (!inputBetrag.value) {
-        alert('Geben Sie einen Betrag ein')
-    } else {
-        steuer();
-        bruttoTonetto();
+
+    //Ternary operator
+    !inputBetrag.value ? alert('Geben Sie einen Betrag ein') : steuer(),
+        bruttoTonetto(),
         // check();
-        outputMwstbetrag.innerHTML = String(mvst.toFixed(2)).replace('.', ',') + ' €'
-        outputEndpreis.innerHTML = String(preis.toFixed(2)).replace('.', ',') + ' €'
-        inputBetrag.value = Number(inputBetrag.value).toFixed(2)
-    }
+        (outputMwstbetrag.innerHTML = String(mvst.toFixed(2)).replace('.', ',') + ' €'),
+        (outputEndpreis.innerHTML = String(preis.toFixed(2)).replace('.', ',') + ' €'),
+        (inputBetrag.value = Number(inputBetrag.value).toFixed(2))
+
+    // if (!inputBetrag.value) {
+    //     alert('Geben Sie einen Betrag ein')
+    // } else {
+    //     steuer();
+    //     bruttoTonetto();
+    //     // check();
+    //     outputMwstbetrag.innerHTML = String(mvst.toFixed(2)).replace('.', ',') + ' €'
+    //     outputEndpreis.innerHTML = String(preis.toFixed(2)).replace('.', ',') + ' €'
+    //     inputBetrag.value = Number(inputBetrag.value).toFixed(2)
+    // }
 
 
 }
